@@ -1,123 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Demo Page</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 40px;
-        }
-
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 700px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #2c3e50;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        #output {
-            margin-top: 20px;
-            color: darkgreen;
-            font-weight: bold;
-        }
-
-        ul {
-            margin-top: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-    </style>
+    <title>Trivy Demo</title>
 </head>
-
 <body>
 
-<div class="container">
-
-    <h1>Welcome to My Demo Page</h1>
-
-    <p>
-        This page demonstrates basic HTML, CSS, and JavaScript.
-        Click the button below to interact with the page.
-    </p>
-
-    <button id="greetButton">Click Me</button>
-
-    <div id="output">
-        Waiting for your action...
-    </div>
-
-    <h2>Favorite Languages</h2>
-
-    <ul id="languageList">
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>C++</li>
-    </ul>
-
-</div>
+<h1>Hello GitHub</h1>
 
 <script>
-    const button = document.getElementById("greetButton");
-    const output = document.getElementById("output");
-    const languageList = document.getElementById("languageList");
+let password = "123456";
 
-    let clickCount = 0;
-
-    button.addEventListener("click", function () {
-        clickCount++;
-
-        output.textContent =
-            `Button clicked ${clickCount} time(s)!`;
-
-        const item = document.createElement("li");
-        item.textContent = `New Item ${clickCount}`;
-        languageList.appendChild(item);
-
-        console.log("Button was clicked.");
-    });
-
-    function greet(name) {
-        return `Hello, ${name}!`;
-    }
-
-    console.log(greet("Student"));
-
-    const numbers = [10, 20, 30, 40, 50];
-
-    const doubled = numbers.map(function (num) {
-        return num * 2;
-    });
-
-    console.log("Original:", numbers);
-    console.log("Doubled:", doubled);
-
-    const today = new Date();
-    console.log("Today's date:", today.toLocaleString());
-
-    window.addEventListener("load", function () {
-        console.log("Page loaded successfully.");
-    });
+console.log(password);
 </script>
 
 </body>

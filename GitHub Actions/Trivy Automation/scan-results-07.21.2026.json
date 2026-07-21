@@ -3,8 +3,8 @@
   "Trivy": {
     "Version": "0.71.2"
   },
-  "ReportID": "019f8593-ee8e-7ba4-9663-b80ff6b0a865",
-  "CreatedAt": "2026-07-21T16:48:12.430765903Z",
+  "ReportID": "019f85cb-bd8a-7950-aec0-e704d5f2fc6a",
+  "CreatedAt": "2026-07-21T17:49:09.898613357Z",
   "ArtifactID": "sha256:64a0c6eaf4465b960adb271f7ab43977d023c436e923891975571c72e51d973f",
   "ArtifactName": "nginx:latest",
   "ArtifactType": "container_image",

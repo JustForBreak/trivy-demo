@@ -3,8 +3,8 @@
   "Trivy": {
     "Version": "0.71.2"
   },
-  "ReportID": "019f85cb-bd8a-7950-aec0-e704d5f2fc6a",
-  "CreatedAt": "2026-07-21T17:49:09.898613357Z",
+  "ReportID": "019f8665-4003-75ed-8636-8b2e6062c9fe",
+  "CreatedAt": "2026-07-21T20:36:50.307390498Z",
   "ArtifactID": "sha256:64a0c6eaf4465b960adb271f7ab43977d023c436e923891975571c72e51d973f",
   "ArtifactName": "nginx:latest",
   "ArtifactType": "container_image",
@@ -10878,6 +10878,7 @@
           "References": [
             "https://access.redhat.com/errata/RHSA-2026:34890",
             "https://access.redhat.com/errata/RHSA-2026:41892",
+            "https://access.redhat.com/errata/RHSA-2026:42668",
             "https://access.redhat.com/security/cve/CVE-2026-12912",
             "https://bugzilla.redhat.com/2251326",
             "https://bugzilla.redhat.com/2492871",
@@ -10892,7 +10893,7 @@
             "https://www.cve.org/CVERecord?id=CVE-2026-12912"
           ],
           "PublishedDate": "2026-06-29T17:16:28.23Z",
-          "LastModifiedDate": "2026-07-20T12:17:53.937Z"
+          "LastModifiedDate": "2026-07-21T13:17:01.78Z"
         }
       ]
     }

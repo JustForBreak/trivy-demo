@@ -1,10 +1,10 @@
 {
   "SchemaVersion": 2,
   "Trivy": {
-    "Version": "0.71.2"
+    "Version": "0.72.0"
   },
-  "ReportID": "019f866a-9101-71a8-a65a-1c2a4d946d96",
-  "CreatedAt": "2026-07-21T20:42:38.72111101Z",
+  "ReportID": "019f8691-5b07-76b4-8b6e-f0dbac2b65dd",
+  "CreatedAt": "2026-07-21T21:25:00.807442231Z",
   "ArtifactID": "sha256:64a0c6eaf4465b960adb271f7ab43977d023c436e923891975571c72e51d973f",
   "ArtifactName": "nginx:latest",
   "ArtifactType": "container_image",

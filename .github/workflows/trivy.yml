@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  security-events: write
 
 jobs:
   build:
@@ -46,17 +47,16 @@ jobs:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
         run: echo "$GHCR_PAT" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Download Trivy vulnerability database
-        run: trivy image --download-db-only
-
-      - name: Run Trivy vulnerability scanner
+      - name: Run Trivy filesystem secret scan
         run: |
-          OUTPUT_FILE="GitHub Actions/Trivy Automation/secret-results-${DATE}.json"
-    trivy fs \
-      --scanners secret \
-      --format json \
-      -o "$OUTPUT_FILE" \
-
+          OUTPUT_FILE="GitHub Actions/Trivy Automation/scan-results-${DATE}.json"
+          trivy fs \
+            --scanners secret,vuln \
+            --format json \
+            --severity CRITICAL,HIGH,MEDIUM,LOW \
+            -o "$OUTPUT_FILE" \
+            --exit-code 0 \
+          .
       - name: Verify scan results exist
         run: ls -l "GitHub Actions/Trivy Automation/"
 

@@ -51,8 +51,11 @@ jobs:
 
       - name: Run Trivy vulnerability scanner
         run: |
-          OUTPUT_FILE="GitHub Actions/Trivy Automation/scan-results-${DATE}.json"
-          trivy image --format json --ignore-unfixed --vuln-type os,library --severity CRITICAL,HIGH,MEDIUM,LOW -o "$OUTPUT_FILE" nginx:latest
+          OUTPUT_FILE="GitHub Actions/Trivy Automation/secret-results-${DATE}.json"
+    trivy fs \
+      --scanners secret \
+      --format json \
+      -o "$OUTPUT_FILE" \
 
       - name: Verify scan results exist
         run: ls -l "GitHub Actions/Trivy Automation/"

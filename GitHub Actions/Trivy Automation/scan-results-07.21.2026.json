@@ -3,15 +3,15 @@
   "Trivy": {
     "Version": "0.72.0"
   },
-  "ReportID": "019f86ba-0dcf-7678-b6fb-804679377d98",
-  "CreatedAt": "2026-07-21T22:09:28.015425332Z",
-  "ArtifactID": "sha256:90c1cff8a42792f1a760f0656ff9e93a7effab9cb07547d9610042ebbbdc2376",
+  "ReportID": "019f8713-95d3-75e9-8e77-f309b9d36e0a",
+  "CreatedAt": "2026-07-21T23:47:15.539388814Z",
+  "ArtifactID": "sha256:14c732e412d83e7f116b61bf2a908a58bc3306696a165b9ed9de146a0fa18397",
   "ArtifactName": ".",
   "ArtifactType": "repository",
   "Metadata": {
     "RepoURL": "https://github.com/JustForBreak/trivy-demo",
     "Branch": "main",
-    "Commit": "dc29f9d9e6b5fbc8723c8a5a300fa796fd4362eb",
+    "Commit": "e6f4364e6bd5401bc154229cb79df883c0bb42f2",
     "CommitMsg": "Merge branch 'main' of https://github.com/JustForBreak/trivy-demo",
     "Author": "JustForBreak \u003cnguyenhunganhminh2k6@gmail.com\u003e",
     "Committer": "JustForBreak \u003cnguyenhunganhminh2k6@gmail.com\u003e"

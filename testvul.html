@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivy Test</title>
+    <title>Trivy Secret Scan Demo</title>
 </head>
 <body>
-    <h1>Welcome to Trivy Secret Scan Demo</h1>
-    <p>This page is intentionally created for testing Trivy.</p>
 
-    <script>
-        const AWS_ACCESS_KEY_ID = "AKIA7X92LM45PQ8RT123";
-        const AWS_SECRET_ACCESS_KEY = "z8Qm92Lx7Vp4Rn6Kd3Ty1Fa9Wc5Bu0Ee";
+<h1>Trivy Security Test</h1>
 
-        console.log("Testing Trivy Secret Scanner");
-    </script>
+<script>
+/* Fake credentials for testing only */
+
+/* Generic API Key */
+const API_KEY = "TEST_API_KEY_abcdefghijklmnopqrstuvwxyz";
+
+/* Database */
+const DB_USERNAME = "admin";
+const DB_PASSWORD = "Password123!";
+
+/* Bearer Token */
+const AUTH_TOKEN = "Bearer test-token-abcdefghijklmnopqrstuvwxyz";
+
+/* Fake JWT */
+const JWT_TOKEN =
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
++"eyJ1c2VyIjoiYWRtaW4ifQ."
++"abcdefghijklmnopqrstuv";
+
+/* Fake RSA Private Key */
+const PRIVATE_KEY = `
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDTestOnly123456
+-----END PRIVATE KEY-----
+`;
+
+console.log("Testing Trivy");
+</script>
 
 </body>
 </html>

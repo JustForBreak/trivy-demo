@@ -52,10 +52,10 @@ jobs:
           OUTPUT_FILE="GitHub Actions/Trivy Automation/scan-results-${DATE}.json"
           trivy fs \
             --scanners secret,vuln \
+            --exit-code 0 \
             --format json \
             --severity CRITICAL,HIGH,MEDIUM,LOW \
             -o "$OUTPUT_FILE" \
-            --exit-code 0 \
           .
       - name: Verify scan results exist
         run: ls -l "GitHub Actions/Trivy Automation/"

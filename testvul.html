@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Trivy Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivy Test</title>
 </head>
 <body>
+    <h1>Welcome to Trivy Secret Scan Demo</h1>
+    <p>This page is intentionally created for testing Trivy.</p>
 
-<h1>Hello GitHub</h1>
+    <script>
+        // ------------------------------
+        // TEST SECRETS (DO NOT USE IN PRODUCTION)
+        // ------------------------------
 
-<script>
-let password = "1234567";
+        // AWS Access Key (example format)
+        const AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE";
 
-console.log(password);
-</script>
+        // GitHub Personal Access Token (fake)
+        const GITHUB_TOKEN = "ghp_1234567890abcdefghijklmnopqrstuvwxyz";
+
+        // Slack Token (fake)
+        const SLACK_TOKEN = "xoxb-123456789012-123456789012-abcdefghijklmnopqrstuvwx";
+
+        // Generic API Key
+        const API_KEY = "1234567890abcdef1234567890abcdef";
+
+        // Database credentials
+        const DB_USERNAME = "admin";
+        const DB_PASSWORD = "SuperSecretPassword123!";
+
+        console.log("Testing Trivy Secret Scanner");
+    </script>
 
 </body>
 </html>

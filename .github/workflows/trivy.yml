@@ -52,6 +52,7 @@ jobs:
           OUTPUT_FILE="GitHub Actions/Trivy Automation/scan-results-${DATE}.json"
           trivy fs \
             --scanners secret,vuln \
+            --secret-config trivy-secret.yaml \
             --exit-code 1 \
             --format json \
             --severity CRITICAL,HIGH,MEDIUM,LOW \

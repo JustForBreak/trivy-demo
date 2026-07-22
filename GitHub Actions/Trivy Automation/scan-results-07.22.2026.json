@@ -3,8 +3,8 @@
   "Trivy": {
     "Version": "0.72.0"
   },
-  "ReportID": "019f8757-ea30-77b2-9c86-9beb5e69c133",
-  "CreatedAt": "2026-07-22T01:01:53.584505286Z",
-  "ArtifactName": ".env.test",
+  "ReportID": "019f8759-bbce-7bae-9fed-9d9abf9acfd3",
+  "CreatedAt": "2026-07-22T01:03:52.782766331Z",
+  "ArtifactName": "test-key.pem",
   "ArtifactType": "filesystem"
 }

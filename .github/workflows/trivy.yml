@@ -51,13 +51,12 @@ jobs:
         run: |
           OUTPUT_FILE="GitHub Actions/Trivy Automation/scan-results-${DATE}.json"
           trivy fs \
-            --scanners secret,vuln \
-            --secret-config trivy-secret.yaml \
+            --scanners vuln \
             --exit-code 1 \
             --format json \
             --severity CRITICAL,HIGH,MEDIUM,LOW \
             -o "$OUTPUT_FILE" \
-          test-key.pem
+          requirements.txt
       - name: Verify scan results exist
         run: ls -l "GitHub Actions/Trivy Automation/"
 

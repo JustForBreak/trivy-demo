@@ -57,7 +57,7 @@ jobs:
             --format json \
             --severity CRITICAL,HIGH,MEDIUM,LOW \
             -o "$OUTPUT_FILE" \
-          .env.test
+          test-key.pem
       - name: Verify scan results exist
         run: ls -l "GitHub Actions/Trivy Automation/"
 

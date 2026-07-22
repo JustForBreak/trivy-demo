@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build:
-    name: Scan nginx:latest with Trivy
+    name: Scan Python dependencies with Trivy
     runs-on: ubuntu-latest
 
     steps:
@@ -47,16 +47,57 @@ jobs:
           GHCR_PAT: ${{ secrets.GHCR_PAT }}
         run: echo "$GHCR_PAT" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Run Trivy filesystem secret scan
+      - name: Run Trivy filesystem scan
+        id: trivy-scan
         run: |
           OUTPUT_FILE="GitHub Actions/Trivy Automation/scan-results-${DATE}.json"
+          echo "OUTPUT_FILE=$OUTPUT_FILE" >> "$GITHUB_ENV"
+          set +e
           trivy fs \
             --scanners vuln \
             --exit-code 1 \
-            --format json \
             --severity CRITICAL,HIGH,MEDIUM,LOW \
+            --format table \
+            requirements.txt
+          TRIVY_EXIT=$?
+          set -e
+          echo "TRIVY_EXIT=$TRIVY_EXIT" >> "$GITHUB_ENV"
+          trivy fs \
+            --scanners vuln \
+            --exit-code 1 \
+            --severity CRITICAL,HIGH,MEDIUM,LOW \
+            --format json \
             -o "$OUTPUT_FILE" \
-          requirements.txt
+            requirements.txt
+          exit 0
+
+      - name: Summarize Trivy findings
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          import os
+
+          path = os.environ["OUTPUT_FILE"]
+          with open(path, "r", encoding="utf-8") as fh:
+              data = json.load(fh)
+
+          results = data.get("Results", [])
+          total = 0
+          for result in results:
+              total += len(result.get("Vulnerabilities", []))
+
+          print(f"Trivy found {total} vulnerabilities across {len(results)} target(s).")
+          for result in results:
+              vulns = result.get("Vulnerabilities", [])
+              if vulns:
+                  print(f"- {result.get('Target', 'unknown')}: {len(vulns)}")
+          PY
+
+      - name: Fail if vulnerabilities were found
+        if: env.TRIVY_EXIT != '0'
+        run: exit 1
+
       - name: Verify scan results exist
         run: ls -l "GitHub Actions/Trivy Automation/"
 

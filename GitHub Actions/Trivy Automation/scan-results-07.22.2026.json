@@ -1,0 +1,19 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.72.0"
+  },
+  "ReportID": "019f8745-a564-7ae5-b860-fde42995e2b3",
+  "CreatedAt": "2026-07-22T00:41:56.324716189Z",
+  "ArtifactID": "sha256:0f5201fc12588dcfb16326625667e44d0ca8734dc9d4e63386ba209d5c913437",
+  "ArtifactName": ".",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/JustForBreak/trivy-demo",
+    "Branch": "main",
+    "Commit": "22a40932e36b9236aec06f779209de37f5b3858a",
+    "CommitMsg": "Merge branch 'main' of https://github.com/JustForBreak/trivy-demo",
+    "Author": "JustForBreak \u003cnguyenhunganhminh2k6@gmail.com\u003e",
+    "Committer": "JustForBreak \u003cnguyenhunganhminh2k6@gmail.com\u003e"
+  }
+}
